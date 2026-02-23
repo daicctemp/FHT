@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>DZI Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- OpenSeadragon -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/openseadragon.min.js"></script>
+
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background: #111;
+      overflow: hidden;
+    }
+    #viewer {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="viewer"></div>
+
+  <script>
+    OpenSeadragon({
+      id: "viewer",
+      prefixUrl: "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/images/",
+      tileSources: "Villa_FlamingoHaiTien.dzi",
+
+      showNavigator: true,
+      navigatorPosition: "BOTTOM_RIGHT",
+
+      showZoomControl: true,
+      showHomeControl: true,
+      showFullPageControl: true,
+
+      zoomPerScroll: 1.2,
+      constrainDuringPan: true,
+      animationTime: 0.6,
+      blendTime: 0.1
+    });
+  </script>
+</body>
+</html>
